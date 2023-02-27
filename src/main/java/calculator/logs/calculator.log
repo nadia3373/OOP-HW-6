@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-02-27T18:30:58.964146Z</date>
+  <millis>1677522658964</millis>
+  <nanos>146000</nanos>
+  <sequence>0</sequence>
+  <logger>calculator.CalcApp</logger>
+  <level>INFO</level>
+  <class>calculator.CalcApp</class>
+  <method>complexAdd</method>
+  <thread>1</thread>
+  <message>Сложение комплексных чисел 1.00 + 2.00j и 3.00 + 5.00j -&gt; 4.00 + 7.00j</message>
+</record>
+<record>
+  <date>2023-02-27T18:31:09.272768Z</date>
+  <millis>1677522669272</millis>
+  <nanos>768000</nanos>
+  <sequence>1</sequence>
+  <logger>calculator.CalcApp</logger>
+  <level>INFO</level>
+  <class>calculator.CalcApp</class>
+  <method>complexPower</method>
+  <thread>1</thread>
+  <message>Возведение комплексного числа 1.00 + 2.00j в степень 3 -&gt; -11.00 + -2.00j</message>
+</record>
+</log>
