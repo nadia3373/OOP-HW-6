@@ -69,6 +69,7 @@ public class CalcApp extends SubApp {
                 case 7 -> rationalGcd(ConsoleIO.rationalInput(), ConsoleIO.rationalInput());
                 case 8 -> rationalLcm(ConsoleIO.rationalInput(), ConsoleIO.rationalInput());
                 case 9 -> switchMode();
+                case 0 -> ConsoleIO.info("Главное меню");
 
                 default -> ConsoleIO.error("Некорректный выбор");
             }
@@ -195,6 +196,5 @@ public class CalcApp extends SubApp {
     public void switchMode() {
         currentCalc = currentCalc.equals(complexCalc) ? rationalCalc : complexCalc;
         menu = getMenu();
-        start();
     }
 }
