@@ -10,7 +10,7 @@ import lombok.Setter;
 public class Grade {
     String subjectName;
     int value;
-    public Grade(String subjectName, int value) {
+    protected Grade(String subjectName, int value) {
         this.subjectName = subjectName;
         this.value = value;
     }

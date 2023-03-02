@@ -1,8 +1,8 @@
-import utilities.MainApp;
+import main.MainController;
 
 public class Main {
     public static void main(String[] args) {
-        MainApp app = new MainApp();
-        app.start();
+        MainController mainApp = new MainController();
+        mainApp.start();
     }
 }

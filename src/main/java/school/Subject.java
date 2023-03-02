@@ -8,17 +8,12 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Subject {
-    public static int counter = 1;
+    static int counter = 1;
     private int id;
     private String name;
 
-    public Subject(String name) {
-        this.id = School.subjectsEmpty() ? counter++ : School.maxSubjectId() + 1;
-        this.name = name;
-    }
-
-    public Subject(int id, String name) {
-        this.id = id;
+    protected Subject(String name) {
+        this.id = counter;
         this.name = name;
     }
 }

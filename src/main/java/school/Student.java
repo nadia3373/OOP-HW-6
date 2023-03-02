@@ -10,31 +10,20 @@ import java.util.ArrayList;
 @Setter
 @NoArgsConstructor
 public class Student {
-    public static int counter = 1;
+    static int counter = 1;
     private int id;
     private String className, name;
     private ArrayList<Grade> grades;
 
-    public Student(String className, String name) {
-        this.id = School.studentsEmpty() ? counter++ : School.maxStudentId() + 1;
+    protected Student(String className, String name) {
+        this.id = counter;
         this.className = className;
         this.name = name;
         this.grades = new ArrayList<Grade>();
     }
 
-    public Student(int id, String className, String name) {
-        this.id = id;
-        this.className = className;
-        this.name = name;
-        this.grades = new ArrayList<Grade>();
-    }
-
-    public void addGrade(Grade grade) {
+    protected void addGrade(Grade grade) {
         grades.add(grade);
-    }
-
-    public void removeGrade(Grade grade) {
-        grades.remove(grade);
     }
 
     @Override

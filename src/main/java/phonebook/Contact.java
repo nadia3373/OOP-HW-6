@@ -5,55 +5,24 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 public class Contact {
-    private static int counter = 1;
+    static int counter = 1;
     private int id;
     private String name;
-    private List<Number> phoneNumbers;
+    private ArrayList<Number> phoneNumbers;
 
-    public Contact(String name, String label, String phone) {
+    protected Contact(String name) {
         this.id = counter;
-        this.name = name;
-        this.phoneNumbers = new ArrayList<>();
-        addPhoneNumber(null);
-        counter++;
-    }
-
-    public Contact(int id, String name, String label, String phone) {
-        this.id = id;
-        this.name = name;
-        this.phoneNumbers = new ArrayList<>();
-        addPhoneNumber(null);
-    }
-
-    public Contact(String name) {
-        this.id = counter;
-        this.name = name;
-        this.phoneNumbers = new ArrayList<>();
-        counter++;
-    }
-
-    public Contact(int id, String name) {
-        this.id = id;
         this.name = name;
         this.phoneNumbers = new ArrayList<>();
     }
 
     protected void addPhoneNumber(Number num) {
-        if (num != null) {
-            phoneNumbers.add(num);
-        } else {
-            phoneNumbers.add(new Number());
-        }
-    }
-
-    protected Number getPhoneNumber(int id) {
-        return phoneNumbers.get(id);
+        phoneNumbers.add(num != null ? num : new Number());
     }
 
     protected void removePhoneNumber(Number num) {

@@ -11,7 +11,7 @@ public class Number {
     private String type;
     private String number;
 
-    public Number(String type, String number) {
+    protected Number(String type, String number) {
         this.type = type;
         this.number = number;
     }
